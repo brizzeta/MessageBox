@@ -1,4 +1,4 @@
-#include "framework.h"
+п»ї#include "framework.h"
 #include "MessageBox.h"
 #include <string>
 using namespace std;
@@ -91,7 +91,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     TCHAR str1[50];
-    string str2 = "Имя: Василенко Дмитрий Юриевич";
+    string str2 = "РРјСЏ: Р’Р°СЃРёР»РµРЅРєРѕ Р”РјРёС‚СЂРёР№ Р®СЂРёРµРІРёС‡";
     int char_count = 0;
     int windows = 0;
 
@@ -101,48 +101,48 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
         MessageBox(
             0,
-            TEXT("Имя: Василенко Дмитрий Юриевич"),
-            TEXT("Резюме"),
+            TEXT("РРјСЏ: Р’Р°СЃРёР»РµРЅРєРѕ Р”РјРёС‚СЂРёР№ Р®СЂРёРµРІРёС‡"),
+            TEXT("Р РµР·СЋРјРµ"),
             MB_OK | MB_ICONINFORMATION);
 
         windows++;
 
         MessageBox(
             0,
-            TEXT("Возраст: 34 года"),
-            TEXT("Резюме"),
+            TEXT("Р’РѕР·СЂР°СЃС‚: 34 РіРѕРґР°"),
+            TEXT("Р РµР·СЋРјРµ"),
             MB_OK | MB_ICONINFORMATION);
 
-        str2 += "Возраст: 34 года";
+        str2 += "Р’РѕР·СЂР°СЃС‚: 34 РіРѕРґР°";
         windows++;
 
         MessageBox(
             0,
-            TEXT("Должность: Главный инженер"),
-            TEXT("Резюме"),
+            TEXT("Р”РѕР»Р¶РЅРѕСЃС‚СЊ: Р“Р»Р°РІРЅС‹Р№ РёРЅР¶РµРЅРµСЂ"),
+            TEXT("Р РµР·СЋРјРµ"),
             MB_OK | MB_ICONINFORMATION);
 
-        str2 += "Должность: Главный инженер";
+        str2 += "Р”РѕР»Р¶РЅРѕСЃС‚СЊ: Р“Р»Р°РІРЅС‹Р№ РёРЅР¶РµРЅРµСЂ";
         windows++;
 
         MessageBox(
             0,
-            TEXT("Опыт работы: 10 лет"),
-            TEXT("Резюме"),
+            TEXT("РћРїС‹С‚ СЂР°Р±РѕС‚С‹: 10 Р»РµС‚"),
+            TEXT("Р РµР·СЋРјРµ"),
             MB_OK | MB_ICONINFORMATION);
 
-        str2 += "Опыт работы: 10 лет";
-        char_count = str2.length();                       //количество символов со всех окон
-        windows++;                                        //количество окон
-        int avarage = char_count / windows;               //среднее количество символов в одном окне
+        str2 += "РћРїС‹С‚ СЂР°Р±РѕС‚С‹: 10 Р»РµС‚";
+        char_count = str2.length();                       //РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ СЃРѕ РІСЃРµС… РѕРєРѕРЅ
+        windows++;                                        //РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРєРѕРЅ
+        int avarage = char_count / windows;               //СЃСЂРµРґРЅРµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ РІ РѕРґРЅРѕРј РѕРєРЅРµ
 
-        str2 = "Avarage symbols: ";                       //строка для вывода результата
-        str2 += to_string(avarage);                       //добавляем результат
-        wstring wstr = wstring(str2.begin(), str2.end()); //преобразуем string в wstring
+        str2 = "Avarage symbols: ";                       //СЃС‚СЂРѕРєР° РґР»СЏ РІС‹РІРѕРґР° СЂРµР·СѓР»СЊС‚Р°С‚Р°
+        str2 += to_string(avarage);                       //РґРѕР±Р°РІР»СЏРµРј СЂРµР·СѓР»СЊС‚Р°С‚
+        wstring wstr = wstring(str2.begin(), str2.end()); //РїСЂРµРѕР±СЂР°Р·СѓРµРј string РІ wstring
 
         MessageBox(
             0,
-            wstr.c_str(),     //wstring в LPCWSTR
+            wstr.c_str(),     //wstring РІ LPCWSTR
             TEXT(""),
             MB_OK | MB_ICONINFORMATION);
         break;
